@@ -33,6 +33,17 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute', 
         top: 0,
         width: '30%'
+    }, 
+    img3: {
+        position: 'absolute', 
+        top: 0,
+        right: 0,
+        width: '20%', 
+    }, 
+    img4: {
+        position: 'absolute', 
+        bottom: "3%", 
+        width: '15%'
     }
 }));
 

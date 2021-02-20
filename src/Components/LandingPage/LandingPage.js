@@ -7,6 +7,8 @@ import TouchAppIcon from '@material-ui/icons/TouchApp';
 
 import vaccineImg from '../../Assets/Images/pic1.jpg'; 
 import virusImg from '../../Assets/Images/pic2.jpg'; 
+import covidImg from '../../Assets/Images/pic3.jpg'; 
+import worldImg from '../../Assets/Images/pic4.jpg'; 
 
 export default function LandingPage() {
     const classes = useStyles(); 
@@ -25,7 +27,8 @@ export default function LandingPage() {
             </p>
             <img src={vaccineImg} className={classes.img1}/>
             <img src={virusImg} className={classes.img2}/>
-
+            <img src={covidImg} className={classes.img3}/>
+            <img src={worldImg} className={classes.img4}/>
         </div>
     )
 }
