@@ -4,5 +4,6 @@ app = Flask(__name__)
 
 @app.route("/time")
 def get_current_time():
-    return {"time": time.time()}
+    current_time = time.strftime("%H:%M:%S", time.localtime())
+    return {"time": current_time}
     
