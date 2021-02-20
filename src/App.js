@@ -1,11 +1,11 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
+import MainPage from "./Components/MainPage/MainPage";
 import LandingPage from "./Components/LandingPage/LandingPage";
-import SitePage from "./Components/SitePage/SitePage";
 import TableQueue from "./Components/TableQueue"; 
 
-import { getTestAPI } from "./urlWrappers"
+import { getTestAPI } from "./urlWrappers";
 
 function TestAPIPage() {
   const [response, setResponse] = useState("")
@@ -24,16 +24,30 @@ function TestAPIPage() {
 }
 
 function App() {
+  const [authenticated, setAuthenticated] = useState(false)
+
   return (
     <div>
       <Router>
         <Switch>
-          <Route exact path="/site" component={SitePage} />
-          <Route exact path="/table" component={TableQueue} />
+          <Route exact path="/landing">
+            {
+              (authenticated) ?
+              (<Redirect to="/" />) :
+              (<LandingPage setAuthenticated={setAuthenticated} />)
+            }
+          </Route>
+          <Route path="/site/:id" component={TableQueue} />
           {/* vvvvv remove later vvvvv */}
           <Route exact path="/testapi" component={TestAPIPage} />
-          {/* ^^^^^ remove later ^^^^^*/} 
-          <Route path="/" component={LandingPage} />
+          {/* ^^^^^ remove later ^^^^^*/}
+          <Route path="/">
+            {
+              (authenticated) ? 
+              (<MainPage />) : 
+              (<Redirect to="/landing" />)
+            }
+          </Route>
         </Switch>
       </Router>
     </div>
