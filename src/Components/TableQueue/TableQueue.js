@@ -13,27 +13,28 @@ const columns = [
   {
     field: 'identity',
     headerName: 'Identity',
-    width: 400,
+    width: 300,
     align: 'left'
-  }
+  }, 
+  { field: 'waitTime', headerName: 'Estimated Time (min)', width: 200, type: 'number', align: 'center'}
 ];
 
 const rows = [
-  { id: 1, name: 'John Smith', email: 'johnsmith.abc.xyz', identity: 'General Public' },
-  { id: 2, name: 'Mary Doe', email: 'marydoe.abc.xyz', identity: 'Healthcare Worker' },
-  { id: 3, name: 'Mitzi Troia', email: 'mitzitroia.abc.xyz', identity: 'Student' },
-  { id: 4, name: 'Hellen Horvath', email: 'hellenhorvath.abc.xyz', identity: 'General Public' },
-  { id: 5, name: 'Bud Norris', email: 'budnorris.abc.xyz', identity: 'General Public' },
-  { id: 6, name: 'Felipe Smithers', email: 'felipesmithers.abc.xyz', identity: 'General Public' },
-  { id: 7, name: 'Elba Baugh', email: 'elbabaugh.abc.xyz', identity: 'Healthcare Worker' },
-  { id: 8, name: 'Marion Pena', email: 'marionpena.abc.xyz', identity: 'General Public' },
-  { id: 9, name: 'Vicky Hain', email: 'vickyhain.abc.xyz', identity: 'General Public' },
-  { id: 10, name: 'Asha Bigger', email: 'ashabigger.abc.xyz', identity: 'General Public' },
-  { id: 11, name: 'Galen Jhonson', email: 'galenjhonson.abc.xyz', identity: 'General Public' },
-  { id: 12, name: 'Daryl Bowie', email: 'darylbowie.abc.xyz', identity: 'Student' },
-  { id: 13, name: 'Sonia Staller', email: 'soniastaller.abc.xyz', identity: 'General Public' },
-  { id: 14, name: 'Altha Cella', email: 'althacella.abc.xyz', identity: 'Healthcare Worker' },
-  { id: 15, name: 'Zoe Serrao', email: 'zoeserrao.abc.xyz', identity: 'General Public' },
+  { id: 1, name: 'John Smith', email: 'johnsmith.abc.xyz', identity: 'General Public', waitTime: 5 },
+  { id: 2, name: 'Mary Doe', email: 'marydoe.abc.xyz', identity: 'Healthcare Worker', waitTime: 10 },
+  { id: 3, name: 'Mitzi Troia', email: 'mitzitroia.abc.xyz', identity: 'Student', waitTime: 15 },
+  { id: 4, name: 'Hellen Horvath', email: 'hellenhorvath.abc.xyz', identity: 'General Public', waitTime: 20},
+  { id: 5, name: 'Bud Norris', email: 'budnorris.abc.xyz', identity: 'General Public', waitTime: 25 },
+  { id: 6, name: 'Felipe Smithers', email: 'felipesmithers.abc.xyz', identity: 'General Public', waitTime: 30 },
+  { id: 7, name: 'Elba Baugh', email: 'elbabaugh.abc.xyz', identity: 'Healthcare Worker', waitTime: 35 },
+  { id: 8, name: 'Marion Pena', email: 'marionpena.abc.xyz', identity: 'General Public', waitTime: 40},
+  { id: 9, name: 'Vicky Hain', email: 'vickyhain.abc.xyz', identity: 'General Public', waitTime: 45},
+  { id: 10, name: 'Asha Bigger', email: 'ashabigger.abc.xyz', identity: 'General Public', waitTime: 50 },
+  { id: 11, name: 'Galen Jhonson', email: 'galenjhonson.abc.xyz', identity: 'General Public', waitTime: 55 },
+  { id: 12, name: 'Daryl Bowie', email: 'darylbowie.abc.xyz', identity: 'Student', waitTime: 60 },
+  { id: 13, name: 'Sonia Staller', email: 'soniastaller.abc.xyz', identity: 'General Public', waitTime: 65 },
+  { id: 14, name: 'Altha Cella', email: 'althacella.abc.xyz', identity: 'Healthcare Worker', waitTime: 70 },
+  { id: 15, name: 'Zoe Serrao', email: 'zoeserrao.abc.xyz', identity: 'General Public', waitTime: 75},
 ];
 
 export default function TableQueue(props) {
