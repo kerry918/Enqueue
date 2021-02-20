@@ -31,7 +31,7 @@ export default function UserForm(props) {
     return (
         <div>
             <div className={classes.cardFormTitle}>
-                <Typography variant="h5">{ timeSelected }</Typography>
+                <Typography variant="h5"><strong>{ timeSelected }</strong></Typography>
                 <Typography variant="h6">Please fill in your information.</Typography>
             </div>
             <div className={classes.cardFormBody}>
