@@ -39,7 +39,7 @@ function App() {
             }
           </Route>
           <Route exact path="/map" component={MapMain} />
-          <Route path="/site/:id" component={TableQueue} />
+          <Route path="/table" component={TableQueue} />
           {/* vvvvv remove later vvvvv */}
           <Route exact path="/testapi" component={TestAPIPage} />
           {/* ^^^^^ remove later ^^^^^*/}

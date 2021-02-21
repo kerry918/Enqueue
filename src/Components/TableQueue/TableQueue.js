@@ -41,7 +41,8 @@ export default function TableQueue(props) {
     const classes = useStyles(); 
     return (
             <div className={classes.root}>
-                <Button href="/" startIcon={<ArrowBackIcon />}>Back to Main</Button>
+                <Button href="/" startIcon={<ArrowBackIcon />}>Back to Main</Button> 
+                <Button href="/map" startIcon={<ArrowBackIcon />}>Back to Map</Button>
                 <Typography align="left" variant="h2" className={classes.titleText}>
                     RIMAC Vaccination Site{props.siteName} <LocalHospitalIcon fontSize="large"/>
                 </Typography>
