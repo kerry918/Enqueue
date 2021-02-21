@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import MainPage from "./Components/MainPage/MainPage";
 import LandingPage from "./Components/LandingPage/LandingPage";
 import TableQueue from "./Components/TableQueue"; 
+import MapMain from './Components/Map/WrappedMap'; 
 
 import { getTestAPI } from "./urlWrappers";
 
@@ -37,6 +38,7 @@ function App() {
               (<LandingPage setAuthenticated={setAuthenticated} />)
             }
           </Route>
+          <Route exact path="/map" component={MapMain} />
           <Route path="/site/:id" component={TableQueue} />
           {/* vvvvv remove later vvvvv */}
           <Route exact path="/testapi" component={TestAPIPage} />
