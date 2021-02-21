@@ -1,9 +1,19 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        padding: '2%', 
-        paddingTop: '1%'
+    tableContainer: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        padding: "20px 0 20px 0"
+    },
+    timeBlock: {
+        width: "360px",
+        height: "60px",
+        backgroundColor: "#a3ddcb",
+        borderWidth: "4px 8px",
+        borderColor: "#0a043c",
+        borderStyle: "solid",
     }
 }));
 

@@ -28,6 +28,13 @@ export default function UserForm(props) {
         alert(`Submitted info\nFirst Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\nPhone Number:${phoneNum}\nIdentity: ${identity}`)
     }
 
+    const identities = [
+        "General Public",
+        "Healthcare Worker",
+        "Immuno-Compromised",
+        "Elderly (65+)"
+    ]
+
     return (
         <div>
             <div className={classes.cardFormTitle}>
@@ -91,14 +98,15 @@ export default function UserForm(props) {
                             InputLabelProps={{
                                 shrink: true,
                             }}
-                            onChange={({ target: { value }}) => setIdentity(value)}
+                            
                         >
                             <InputLabel>Identity</InputLabel>
-                            <Select label="Identity">
-                                <MenuItem value={0}>General Public</MenuItem>
-                                <MenuItem value={1}>Healthcare Worker</MenuItem>
-                                <MenuItem value={2}>Immuno-Compromised</MenuItem>
-                                <MenuItem value={3}>Elderly (65+)</MenuItem>
+                            <Select label="Identity" value={identity} onChange={({ target: { value }}) => setIdentity(value)}>
+                                {identities.map((ide) => (
+                                    <MenuItem key={ide} value={ide}>
+                                        {ide}
+                                    </MenuItem>
+                                ))}
                             </Select>
                         </FormControl>
                     </div>
