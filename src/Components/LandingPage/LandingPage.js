@@ -10,8 +10,12 @@ import virusImg from '../../Assets/Images/pic2.jpg';
 import covidImg from '../../Assets/Images/pic3.jpg'; 
 import worldImg from '../../Assets/Images/pic4.jpg'; 
 
-export default function LandingPage() {
+export default function LandingPage(props) {
     const classes = useStyles(); 
+
+    const setAuthenticated = (e) => {
+        props.setAuthenticated(e)
+    }
 
     return (
         <div className={classes.root}>
@@ -23,7 +27,11 @@ export default function LandingPage() {
                 velit esse cillum dolore eu fugiat nulla pariatur.
             </p>
             <p align="center">
+<<<<<<< HEAD
                 <Button href="/map" size="large" className={classes.button}>Sign up<ArrowRightAltIcon/></Button>
+=======
+                <Button onClick={() => setAuthenticated(true)} size="large" className={classes.button}>Sign up<ArrowRightAltIcon/></Button>
+>>>>>>> a29f78c98594fc1074cba8bf5369b4019c90816d
             </p>
             <img src={vaccineImg} className={classes.img1}/>
             <img src={virusImg} className={classes.img2}/>

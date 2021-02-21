@@ -1,11 +1,11 @@
 import React from 'react'; 
-import "./SitePage.css";
+import SiteCard from "../SiteCard/SiteCard";
 
 export default function LandingPage() {
-
     return (
         <div>
-            <h1> Site Page </h1>
+            <h1>Main Page Placeholder</h1>
+            <SiteCard />
         </div>
     )
 }
