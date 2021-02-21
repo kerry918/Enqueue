@@ -110,7 +110,7 @@ export default function UserForm(props) {
                             </Select>
                         </FormControl>
                     </div>
-                    <Typography>
+                    <Typography style={{fontFamily: 'Andale Mono, monospace',}}>
                         Remember to bring appropriate documentation to the vaccination site.
                     </Typography>
                     <div className={classes.cardFormButtons}>

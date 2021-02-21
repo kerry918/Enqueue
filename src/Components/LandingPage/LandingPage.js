@@ -19,7 +19,7 @@ export default function LandingPage(props) {
 
     return (
         <div className={classes.root}>
-            <p align="center" className={classes.titleText}>enqueue<TouchAppIcon fontSize="large"/></p>
+            <p align="center" className={classes.titleText}>Vacci-Queue<TouchAppIcon fontSize="large"/></p>
             <p align="center" className={classes.descText}>
             Immunizations, also known as vaccinations, help protect you from getting an infectious disease. 
             An overwhelming majority of health professionals and medical researchers recommend immunization. Getting immunized is important for at least 

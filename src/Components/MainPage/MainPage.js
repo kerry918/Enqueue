@@ -14,7 +14,7 @@ export default function LandingPage() {
     return (
         <div className={classes.root}>
             <Button href="/" startIcon={<ArrowBackIcon />}>Back to Main</Button>
-            <h1>Main Page Placeholder</h1>
+            <h1 style={{fontFamily: 'Andale Mono, monospace',}}>Reservation for upcoming vaccine</h1>
             <SiteCard/>
             <img src={vaccineImg} className={classes.img1}/>
             <img src={virusImg} className={classes.img2}/>

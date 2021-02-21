@@ -15,7 +15,13 @@ const useStyles = makeStyles((theme) => ({
     timeBlock: {
         width: "360px",
         height: "60px",
-        backgroundColor: "#a3ddcb",
+        "&:nth-child(3)": {
+            backgroundColor: "#a3ddcb",
+        },
+        "&:nth-child(7)": {
+            backgroundColor: "#a3ddcb",
+        },
+        backgroundColor: "#ff8080",
         borderWidth: "1px",
         borderColor: "#0a043c",
         borderStyle: "solid",
