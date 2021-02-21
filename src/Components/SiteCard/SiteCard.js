@@ -25,8 +25,8 @@ export default function SiteCard() {
     return (
         <div className={classes.cardContainer}>
             <div className={classes.cardHeader}>
-                <Typography variant="h3">{ site.name }</Typography>
-                <Typography variant="h6">
+                <Typography variant="h3" style={{fontFamily: 'Andale Mono, monospace'}}>{ site.name }</Typography>
+                <Typography variant="h6" style={{fontFamily: 'Andale Mono, monospace'}}>
                     { `Available Hours: ${site.startTime.format("h:mma")} - ${site.endTime.format("h:mma")}` }
                 </Typography>
             </div>

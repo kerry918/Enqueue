@@ -40,6 +40,7 @@ export default function TimeTable(props) {
 
     return (
         <div className={classes.tableContainer}>
+            <p className={classes.title}>Select an available timeslot</p>
             { timeblockComponents }
         </div>
     )
