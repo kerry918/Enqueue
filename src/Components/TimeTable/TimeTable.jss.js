@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        padding: "20px 0 20px 0"
+        padding: "10px 0 10px 0", 
     },
     timeBlock: {
         width: "360px",
