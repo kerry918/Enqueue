@@ -3,7 +3,7 @@ import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow} from "react-
 import mapStyles from "./mapStyles"; 
 
 const center = {
-    lat: 32.880096421618646,
+    lat: 32.890096421618646,
     lng: -117.2339813156968,
 };
 
@@ -25,7 +25,7 @@ const markers = [
         This will ensure 2nd dose vaccines are available for Veterans who were previously vaccinated at the VA San 
         Diego Healthcare System. As with most services and care we provide, we are unable to administer vaccinations 
         to unenrolled spouses and other family members.`, 
-        link: "https://ucsdnews.ucsd.edu/pressrelease/uc-san-diego-health-opens-vaccination-site-on-university-campus", 
+        link: "https://www.sandiego.va.gov/", 
         hour: "Open: 2:00 PM - 6:00 PM"
     }, 
     {
@@ -49,9 +49,32 @@ const markers = [
         as well as women’s health care, including OB-GYN and labor and delivery services, are just a portion of what 
         Scripps Memorial has to offer. This nationally recognized Southern California hospital also provides a Level 
         II Trauma center and 24-hour emergency services.`, 
-        link: "https://ucsdnews.ucsd.edu/pressrelease/uc-san-diego-health-opens-vaccination-site-on-university-campus", 
+        link: "https://scrippsamg.com/hospital/scripps-memorial-hospital-la-jolla/", 
         hour: "Open: 2:00 PM - 6:00 PM"
     }, 
+    {
+        lat: 32.97392140244049, 
+        lng: -117.25652661547099, 
+        name: "North Coastal – Scripps Del Mar Fairgrounds Park Super Station", 
+        desc:  `The Scripps Del Mar Fairgrounds Vaccination Super Station, which will be located at 
+        2260 Jimmy Durante Blvd., will provide drive-through and walk-through services on an 
+        appointment-only basis to anyone eligible to receive a shot under County of San Diego guidelines. `, 
+        link: "https://www.scripps.org/news_items/7153-covid-vaccination-super-station-at-del-mar-fairgrounds-opening-friday", 
+        hour: "Open: 8:00 AM - 12:00 PM"
+    }, 
+    {
+        lat: 32.80994447572534, 
+        lng: -117.15042720349678, 
+        name: "San Diego Rady Children's Hospital", 
+        desc:  `Since Rady Children’s first opened its doors in 1954, our mission has been “to restore, 
+        sustain and enhance the health and developmental potential of children through excellence in care, 
+        education, research and advocacy.” Our goal is to help create a region where all children can go to 
+        school healthy and ready to learn how to be productive, responsible citizens. Today’s children are 
+        tomorrow’s leaders. `, 
+        link: "https://www.rchsd.org/", 
+        hour: "Open: 7:00 AM - 3:00 PM"
+    }, 
+    
 ]
 
 class Map extends Component {
@@ -67,7 +90,7 @@ class Map extends Component {
         return (
             <div>
                 <GoogleMap 
-                    defaultZoom={14}
+                    defaultZoom={12}
                     defaultCenter={center}
                     defaultOptions={options}
                 >
