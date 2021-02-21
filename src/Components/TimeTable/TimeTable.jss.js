@@ -3,6 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
     title: {
         fontFamily: 'Andale Mono, monospace', 
+        color: '#1F8C9D', 
+        fontWeigh: '600'
     },
     tableContainer: {
         display: "flex",
@@ -14,9 +16,10 @@ const useStyles = makeStyles((theme) => ({
         width: "360px",
         height: "60px",
         backgroundColor: "#a3ddcb",
-        borderWidth: "4px 8px",
+        borderWidth: "1px",
         borderColor: "#0a043c",
         borderStyle: "solid",
+        color: '#005360',
     }
 }));
 
