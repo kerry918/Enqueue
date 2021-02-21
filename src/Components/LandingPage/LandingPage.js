@@ -23,7 +23,7 @@ export default function LandingPage() {
                 velit esse cillum dolore eu fugiat nulla pariatur.
             </p>
             <p align="center">
-                <Button href="/site" size="large" className={classes.button}>Sign up<ArrowRightAltIcon/></Button>
+                <Button href="/map" size="large" className={classes.button}>Sign up<ArrowRightAltIcon/></Button>
             </p>
             <img src={vaccineImg} className={classes.img1}/>
             <img src={virusImg} className={classes.img2}/>
