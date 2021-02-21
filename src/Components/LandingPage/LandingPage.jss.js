@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
         color: '#E7CC83' 
     }, 
     descText: {
-        margin: '0 15%', 
+        margin: '0 8%', 
         fontFamily: 'Andale Mono, monospace', 
         fontSize: '2vw', 
         color: '#8C6A0E'

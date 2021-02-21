@@ -21,10 +21,11 @@ export default function LandingPage(props) {
         <div className={classes.root}>
             <p align="center" className={classes.titleText}>enqueue<TouchAppIcon fontSize="large"/></p>
             <p align="center" className={classes.descText}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                velit esse cillum dolore eu fugiat nulla pariatur.
+            Immunizations, also known as vaccinations, help protect you from getting an infectious disease. 
+            An overwhelming majority of health professionals and medical researchers recommend immunization. Getting immunized is important for at least 
+            two reasons: to protect yourself and to protect those around you. Vaccines are the best 
+            way we have to prevent infectious disease. A successful immunization program depends on the 
+            co-operation of every person.
             </p>
             <p align="center">
                 <Button onClick={() => setAuthenticated(true)} size="large" className={classes.button}>Sign up<ArrowRightAltIcon/></Button>
