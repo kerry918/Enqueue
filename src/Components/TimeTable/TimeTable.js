@@ -1,24 +1,47 @@
 import React from 'react';
 import { Button } from "@material-ui/core";
 import useStyles from "./TimeTable.jss";
+import moment from "moment";
+import { useEffect } from 'react';
+
+function splitTime(startTime, endTime, interval) {
+    const result = [startTime.format("h:mma")];
+    let time = startTime.add(interval, "m");
+    while (time.isBetween(startTime, endTime, undefined, [])) {
+        result.push(time.format("h:mma"));
+        time = time.add(interval, "m");
+    }
+    return result;
+}
 
 export default function TimeTable(props) {
+    // TODO: pass site through props
+    const startTime = new moment({ hour: 14, minute: 0 });
+    const endTime = new moment({ hour: 18, minute: 0 });
+
+    const classes = useStyles();
+
     const setTimeSelected = (time) => {
         props.setTimeSelected(time);
     }
 
+    const interval = 30;
+    const timeblocks = splitTime(startTime, endTime, interval);
+    const timeblockComponents = [];
+
+    for (let i = 0; i < timeblocks.length - 1; i++) {
+        const rangeStr = `${timeblocks[i]} - ${timeblocks[i+1]}`
+        timeblockComponents.push(
+            <Button key={i} className={classes.timeBlock} onClick={() => setTimeSelected(rangeStr)}>
+                { rangeStr }
+            </Button>
+        )
+    }
+
     return (
-        <div>
-            <h1> PLACEHOLDER TIME TABLE </h1>
-            <Button onClick={() => setTimeSelected("2:00pm - 3:00pm")}>
-                2-3pm
-            </Button>
-            <Button onClick={() => setTimeSelected("3:00pm - 4:00pm")}>
-                3-4pm
-            </Button>
-            <Button onClick={() => setTimeSelected("4:00pm - 5:00pm")}>
-                4-5pm
-            </Button>
+        <div className={classes.tableContainer}>
+            <p className={classes.title}>Select an available timeslot</p>
+            { timeblockComponents }
         </div>
     )
 }
