@@ -47,14 +47,14 @@ def register():
         name = form.name.data
         username = form.username.data
         age = form.age.data
-        #immune_status = form.immune_status.data
+        immune_status = form.immune_status.data
         password = sha256_crypt.encrypt(str(form.password.data))
 
         # Create cursor
         cur = mysql.connection.cursor()
 
         # Execute query
-        cur.execute("INSERT INTO users(name, username, age, immune_status, password) VALUES(%s, %s, %s, %s, %s)", (name, username, age, immune_status, password))
+        cur.execute("INSERT INTO users(name, email, age, immune_status, password) VALUES(%s, %s, %s, %s, %s)", (name, username, age, immune_status, password))
 
         # Commit to DB
         mysql.connection.commit()
