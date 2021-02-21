@@ -27,11 +27,7 @@ export default function LandingPage(props) {
                 velit esse cillum dolore eu fugiat nulla pariatur.
             </p>
             <p align="center">
-<<<<<<< HEAD
-                <Button href="/map" size="large" className={classes.button}>Sign up<ArrowRightAltIcon/></Button>
-=======
                 <Button onClick={() => setAuthenticated(true)} size="large" className={classes.button}>Sign up<ArrowRightAltIcon/></Button>
->>>>>>> a29f78c98594fc1074cba8bf5369b4019c90816d
             </p>
             <img src={vaccineImg} className={classes.img1}/>
             <img src={virusImg} className={classes.img2}/>

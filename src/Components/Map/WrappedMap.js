@@ -7,7 +7,7 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 export default function MapMain(props) {
     return (
         <div style={{height: '80vh', width: '90vw', padding: '3%' }}>
-            <Button href="/" startIcon={<ArrowBackIcon />}>Back to Main</Button>
+            <Button href="/landingpage" startIcon={<ArrowBackIcon />}>Back to Main</Button>
             <WrappedMap 
                 googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&
                 libraries=geometry,drawing,places&key=AIzaSyCTn-yznomhbeamrh14IdBGTusMbnOBCYk`}

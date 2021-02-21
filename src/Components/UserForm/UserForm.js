@@ -109,7 +109,7 @@ export default function UserForm(props) {
                         <Button onClick={() => setTimeSelected(null)} size="medium" color="default" startIcon={<ArrowBackIcon />}>
                             Back
                         </Button>
-                        <Button variant="contained" size="large" color="primary" type="submit">
+                        <Button variant="contained" size="large" color="primary" type="submit" href="/map">
                             Submit
                         </Button>
                     </div>
